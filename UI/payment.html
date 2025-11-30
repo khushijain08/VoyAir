@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - VoyAir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">✈️</span>
+                    <span class="logo-text">VoyAir</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="booking.html" class="nav-link">Book Flight</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Payment Page -->
+    <section id="payment" class="page active">
+        <div class="payment-container">
+            <h1 class="page-title">Payment</h1>
+            
+            <div class="payment-grid">
+                <div class="payment-methods glass-card">
+                    <h2>Payment Method</h2>
+                    <div class="payment-options">
+                        <div class="payment-option active">
+                            <div class="payment-icon">💳</div>
+                            <span>Credit/Debit Card</span>
+                        </div>
+                        <div class="payment-option">
+                            <div class="payment-icon">📱</div>
+                            <span>UPI</span>
+                        </div>
+                        <div class="payment-option">
+                            <div class="payment-icon">₿</div>
+                            <span>Bitcoin</span>
+                        </div>
+                        <div class="payment-option">
+                            <div class="payment-icon">🏦</div>
+                            <span>Net Banking</span>
+                        </div>
+                    </div>
+
+                    <div class="card-form">
+                        <div class="card-preview glass-card">
+                            <div class="card-chip"></div>
+                            <div class="card-number">**** **** **** 1234</div>
+                            <div class="card-details">
+                                <div class="card-name">JOHN DOE</div>
+                                <div class="card-expiry">12/25</div>
+                            </div>
+                        </div>
+                        <form class="card-input-form">
+                            <div class="form-group">
+                                <label>Card Number</label>
+                                <input type="text" placeholder="1234 5678 9012 3456" class="glow-input" maxlength="19">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Expiry Date</label>
+                                    <input type="text" placeholder="MM/YY" class="glow-input" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label>CVV</label>
+                                    <input type="text" placeholder="123" class="glow-input" maxlength="3">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Cardholder Name</label>
+                                <input type="text" placeholder="JOHN DOE" class="glow-input">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="order-summary glass-card">
+                    <h2>Order Summary</h2>
+                    <div class="summary-item">
+                        <span>Flight</span>
+                        <span>New York → London</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Class</span>
+                        <span>Business</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Seats</span>
+                        <span id="summary-seats">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Passengers</span>
+                        <span>1</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span class="gold-text">$1,299</span>
+                    </div>
+                    <button class="neon-button full-width">
+                        <span>Pay Now</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

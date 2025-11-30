@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Flight - VoyAir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">✈️</span>
+                    <span class="logo-text">VoyAir</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="booking.html" class="nav-link active">Book Flight</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="my-bookings.html" class="nav-link">My Bookings</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Flight Booking Page -->
+    <section id="booking" class="page active">
+        <div class="booking-container">
+            <!-- Enhanced Search Bar -->
+            <div class="booking-search-main glass-card">
+                <h2 class="search-title">Search Flights</h2>
+                <div class="search-form-main">
+                    <div class="search-field-main">
+                        <label>From</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">📍</span>
+                            <input type="text" placeholder="Origin Airport" class="glow-input">
+                        </div>
+                    </div>
+                    <div class="swap-button-main">⇄</div>
+                    <div class="search-field-main">
+                        <label>To</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">📍</span>
+                            <input type="text" placeholder="Destination Airport" class="glow-input">
+                        </div>
+                    </div>
+                    <div class="search-field-main">
+                        <label>Departure</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">📅</span>
+                            <input type="date" class="glow-input">
+                        </div>
+                    </div>
+                    <div class="search-field-main">
+                        <label>Return</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">📅</span>
+                            <input type="date" class="glow-input">
+                        </div>
+                    </div>
+                    <div class="search-field-main">
+                        <label>Class</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">💺</span>
+                            <select class="glow-input">
+                                <option>Economy</option>
+                                <option>Business</option>
+                                <option>First Class</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-field-main">
+                        <label>Passengers</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">👥</span>
+                            <input type="number" min="1" max="9" value="1" class="glow-input">
+                        </div>
+                    </div>
+                    <button class="neon-button search-button-main">
+                        <span>Search Flights</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="class-selection">
+                <h2 class="section-title">Choose Your Class</h2>
+                <div class="class-cards">
+                    <div class="class-card glass-card class-card-with-image" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                        <h3>Economy</h3>
+                        <div class="class-price">$499</div>
+                        <ul class="class-features">
+                            <li>✓ Standard Seat</li>
+                            <li>✓ Meal Included</li>
+                            <li>✓ 23kg Baggage</li>
+                        </ul>
+                        <button class="neon-button">Select</button>
+                    </div>
+                    <div class="class-card glass-card featured class-card-with-image" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');">
+                        <div class="featured-badge">POPULAR</div>
+                        <h3>Business</h3>
+                        <div class="class-price gold-text">$1,299</div>
+                        <ul class="class-features">
+                            <li>✓ Premium Seat</li>
+                            <li>✓ Gourmet Meals</li>
+                            <li>✓ 32kg Baggage</li>
+                            <li>✓ Priority Boarding</li>
+                        </ul>
+                        <button class="neon-button">Select</button>
+                    </div>
+                    <div class="class-card glass-card class-card-with-image" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                        <h3>First Class</h3>
+                        <div class="class-price gold-text">$2,999</div>
+                        <ul class="class-features">
+                            <li>✓ Luxury Suite</li>
+                            <li>✓ Fine Dining</li>
+                            <li>✓ 40kg Baggage</li>
+                            <li>✓ Private Lounge</li>
+                            <li>✓ Concierge Service</li>
+                        </ul>
+                        <button class="neon-button">Select</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flight-comparison">
+                <h2 class="section-title">Available Flights</h2>
+                <div class="flight-cards">
+                    <div class="flight-card glass-card flight-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');">
+                        <div class="airline-logo-small">AA</div>
+                        <div class="flight-header">
+                            <span class="flight-time">08:00 - 14:30</span>
+                            <span class="flight-duration">6h 30m</span>
+                        </div>
+                        <div class="flight-route">JFK → LHR</div>
+                        <div class="flight-airline">American Airlines</div>
+                        <div class="flight-price">$1,299</div>
+                        <button class="neon-button small">Book Now</button>
+                    </div>
+                    <div class="flight-card glass-card flight-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="airline-logo-small">BA</div>
+                        <div class="flight-header">
+                            <span class="flight-time">12:00 - 18:45</span>
+                            <span class="flight-duration">6h 45m</span>
+                        </div>
+                        <div class="flight-route">JFK → LHR</div>
+                        <div class="flight-airline">British Airways</div>
+                        <div class="flight-price">$1,199</div>
+                        <button class="neon-button small">Book Now</button>
+                    </div>
+                    <div class="flight-card glass-card flight-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');">
+                        <div class="airline-logo-small">DL</div>
+                        <div class="flight-header">
+                            <span class="flight-time">15:30 - 22:00</span>
+                            <span class="flight-duration">6h 30m</span>
+                        </div>
+                        <div class="flight-route">JFK → LHR</div>
+                        <div class="flight-airline">Delta Airlines</div>
+                        <div class="flight-price">$1,149</div>
+                        <button class="neon-button small">Book Now</button>
+                    </div>
+                    <div class="flight-card glass-card flight-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="airline-logo-small">UA</div>
+                        <div class="flight-header">
+                            <span class="flight-time">20:00 - 02:30</span>
+                            <span class="flight-duration">6h 30m</span>
+                        </div>
+                        <div class="flight-route">JFK → LHR</div>
+                        <div class="flight-airline">United Airlines</div>
+                        <div class="flight-price">$1,249</div>
+                        <button class="neon-button small">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Destinations -->
+            <div class="popular-destinations">
+                <h2 class="section-title">Popular Destinations</h2>
+                <div class="destinations-grid-booking">
+                    <div class="destination-card-booking glass-card">
+                        <div class="destination-image-booking" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <div class="destination-content-booking">
+                            <h3>New York</h3>
+                            <p>From $299</p>
+                            <button class="neon-button small">Explore</button>
+                        </div>
+                    </div>
+                    <div class="destination-card-booking glass-card">
+                        <div class="destination-image-booking" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80');"></div>
+                        <div class="destination-content-booking">
+                            <h3>Paris</h3>
+                            <p>From $399</p>
+                            <button class="neon-button small">Explore</button>
+                        </div>
+                    </div>
+                    <div class="destination-card-booking glass-card">
+                        <div class="destination-image-booking" style="background-image: url('https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="destination-content-booking">
+                            <h3>Tokyo</h3>
+                            <p>From $599</p>
+                            <button class="neon-button small">Explore</button>
+                        </div>
+                    </div>
+                    <div class="destination-card-booking glass-card">
+                        <div class="destination-image-booking" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <div class="destination-content-booking">
+                            <h3>London</h3>
+                            <p>From $349</p>
+                            <button class="neon-button small">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Offers -->
+            <div class="special-offers-booking">
+                <h2 class="section-title">Special Offers</h2>
+                <div class="offers-grid-booking">
+                    <div class="offer-card-booking glass-card">
+                        <div class="offer-badge-booking">Save 20%</div>
+                        <h3>Early Bird Discount</h3>
+                        <p>Book 30 days in advance and save up to 20% on your flight</p>
+                        <div class="offer-code">Code: EARLY20</div>
+                    </div>
+                    <div class="offer-card-booking glass-card">
+                        <div class="offer-badge-booking">Free Upgrade</div>
+                        <h3>Business Class Upgrade</h3>
+                        <p>Get a free upgrade to Business Class on select routes</p>
+                        <div class="offer-code">Limited Time</div>
+                    </div>
+                    <div class="offer-card-booking glass-card">
+                        <div class="offer-badge-booking">Bonus Miles</div>
+                        <h3>Double Miles Promotion</h3>
+                        <p>Earn double loyalty miles on all bookings this month</p>
+                        <div class="offer-code">Valid until Dec 31</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel Tips -->
+            <div class="travel-tips">
+                <h2 class="section-title">Travel Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card glass-card">
+                        <div class="tip-icon">✈️</div>
+                        <h3>Best Time to Book</h3>
+                        <p>Book your flights 6-8 weeks in advance for the best prices. Tuesday and Wednesday are typically the cheapest days to fly.</p>
+                    </div>
+                    <div class="tip-card glass-card">
+                        <div class="tip-icon">🎒</div>
+                        <h3>Baggage Tips</h3>
+                        <p>Check baggage allowances before packing. Consider purchasing extra baggage online for better rates than at the airport.</p>
+                    </div>
+                    <div class="tip-card glass-card">
+                        <div class="tip-icon">🛡️</div>
+                        <h3>Travel Insurance</h3>
+                        <p>Protect your trip with comprehensive travel insurance covering cancellations, delays, and medical emergencies.</p>
+                    </div>
+                    <div class="tip-card glass-card">
+                        <div class="tip-icon">📱</div>
+                        <h3>Mobile Check-in</h3>
+                        <p>Use our mobile app for quick check-in, digital boarding passes, and real-time flight updates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+ 

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - VoyAir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">✈️</span>
+                    <span class="logo-text">VoyAir</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="booking.html" class="nav-link">Book Flight</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="my-bookings.html" class="nav-link active">My Bookings</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- My Bookings Page -->
+    <section id="my-bookings" class="page active">
+        <div class="bookings-hero" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');">
+            <div class="bookings-hero-overlay"></div>
+            <h1 class="page-title">My Bookings</h1>
+            <p class="bookings-subtitle">Manage all your flight reservations in one place</p>
+        </div>
+
+        <div class="bookings-container">
+            <!-- Booking Stats -->
+            <div class="booking-stats-grid">
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-content">
+                        <h3>Upcoming Flights</h3>
+                        <p class="stat-number">5</p>
+                        <p class="stat-label">Next flight in 3 days</p>
+                    </div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-content">
+                        <h3>Completed</h3>
+                        <p class="stat-number">12</p>
+                        <p class="stat-label">Total flights taken</p>
+                    </div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-content">
+                        <h3>Total Spent</h3>
+                        <p class="stat-number gold-text">$15,450</p>
+                        <p class="stat-label">This year</p>
+                    </div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-content">
+                        <h3>Miles Earned</h3>
+                        <p class="stat-number gold-text">45,230</p>
+                        <p class="stat-label">Available for redemption</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="booking-filters glass-card">
+                <button class="filter-btn active" data-filter="all">All Bookings</button>
+                <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="cancelled">Cancelled</button>
+                <div class="search-booking">
+                    <input type="text" placeholder="Search bookings..." class="glow-input">
+                    <button class="neon-button small">Search</button>
+                </div>
+            </div>
+
+            <!-- Upcoming Bookings -->
+            <div class="bookings-section">
+                <h2 class="section-title">Upcoming Flights</h2>
+                <div class="bookings-list-detailed">
+                    <div class="booking-card-detailed glass-card booking-card-with-bg" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="booking-card-header">
+                            <div class="booking-status confirmed">
+                                <span class="status-dot"></span>
+                                <span>Confirmed</span>
+                            </div>
+                            <div class="booking-ref">Booking #: LA-2024-123456</div>
+                        </div>
+                        <div class="booking-card-body">
+                            <div class="booking-route-large">
+                                <div class="route-city">
+                                    <div class="city-image-small" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                                    <div class="city-code">JFK</div>
+                                    <div class="city-name">New York</div>
+                                    <div class="city-time">08:00</div>
+                                    <div class="city-date">Dec 25, 2024</div>
+                                </div>
+                                <div class="route-arrow">
+                                    <div class="flight-duration">6h 30m</div>
+                                    <div class="flight-icon">✈️</div>
+                                    <div class="flight-stops">Non-stop</div>
+                                </div>
+                                <div class="route-city">
+                                    <div class="city-image-small" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                                    <div class="city-code">LHR</div>
+                                    <div class="city-name">London</div>
+                                    <div class="city-time">14:30</div>
+                                    <div class="city-date">Dec 25, 2024</div>
+                                </div>
+                            </div>
+                            <div class="booking-details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">Flight Number</span>
+                                    <span class="detail-value">AA1234</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class</span>
+                                    <span class="detail-value">Business</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Seats</span>
+                                    <span class="detail-value">3A, 3B</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Passengers</span>
+                                    <span class="detail-value">2 Adults</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Total Amount</span>
+                                    <span class="detail-value gold-text">$2,598</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Booking Date</span>
+                                    <span class="detail-value">Nov 15, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-card-footer">
+                            <button class="action-btn-view" onclick="window.location.href='ticket.html'">View Ticket</button>
+                            <button class="action-btn-modify">Modify</button>
+                            <button class="action-btn-cancel">Cancel</button>
+                            <button class="action-btn-checkin">Check-in</button>
+                        </div>
+                    </div>
+
+                    <div class="booking-card-detailed glass-card booking-card-with-bg" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80');">
+                        <div class="booking-card-header">
+                            <div class="booking-status confirmed">
+                                <span class="status-dot"></span>
+                                <span>Confirmed</span>
+                            </div>
+                            <div class="booking-ref">Booking #: LA-2024-123457</div>
+                        </div>
+                        <div class="booking-card-body">
+                            <div class="booking-route-large">
+                                <div class="route-city">
+                                    <div class="city-image-small" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                                    <div class="city-code">CDG</div>
+                                    <div class="city-name">Paris</div>
+                                    <div class="city-time">10:30</div>
+                                    <div class="city-date">Jan 10, 2025</div>
+                                </div>
+                                <div class="route-arrow">
+                                    <div class="flight-duration">11h 15m</div>
+                                    <div class="flight-icon">✈️</div>
+                                    <div class="flight-stops">1 Stop (Dubai)</div>
+                                </div>
+                                <div class="route-city">
+                                    <div class="city-image-small" style="background-image: url('https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                                    <div class="city-code">NRT</div>
+                                    <div class="city-name">Tokyo</div>
+                                    <div class="city-time">21:45</div>
+                                    <div class="city-date">Jan 11, 2025</div>
+                                </div>
+                            </div>
+                            <div class="booking-details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">Flight Number</span>
+                                    <span class="detail-value">JL5678</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class</span>
+                                    <span class="detail-value">First Class</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Seats</span>
+                                    <span class="detail-value">1A</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Passengers</span>
+                                    <span class="detail-value">1 Adult</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Total Amount</span>
+                                    <span class="detail-value gold-text">$2,999</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Booking Date</span>
+                                    <span class="detail-value">Dec 1, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-card-footer">
+                            <button class="action-btn-view" onclick="window.location.href='ticket.html'">View Ticket</button>
+                            <button class="action-btn-modify">Modify</button>
+                            <button class="action-btn-cancel">Cancel</button>
+                            <button class="action-btn-checkin">Check-in</button>
+                        </div>
+                    </div>
+
+                    <div class="booking-card-detailed glass-card">
+                        <div class="booking-card-header">
+                            <div class="booking-status pending">
+                                <span class="status-dot"></span>
+                                <span>Pending</span>
+                            </div>
+                            <div class="booking-ref">Booking #: LA-2024-123458</div>
+                        </div>
+                        <div class="booking-card-body">
+                            <div class="booking-route-large">
+                                <div class="route-city">
+                                    <div class="city-code">DXB</div>
+                                    <div class="city-name">Dubai</div>
+                                    <div class="city-time">14:00</div>
+                                    <div class="city-date">Feb 5, 2025</div>
+                                </div>
+                                <div class="route-arrow">
+                                    <div class="flight-duration">8h 20m</div>
+                                    <div class="flight-icon">✈️</div>
+                                    <div class="flight-stops">Non-stop</div>
+                                </div>
+                                <div class="route-city">
+                                    <div class="city-code">SIN</div>
+                                    <div class="city-name">Singapore</div>
+                                    <div class="city-time">22:20</div>
+                                    <div class="city-date">Feb 5, 2025</div>
+                                </div>
+                            </div>
+                            <div class="booking-details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">Flight Number</span>
+                                    <span class="detail-value">EK456</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class</span>
+                                    <span class="detail-value">Business</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Seats</span>
+                                    <span class="detail-value">4C</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Passengers</span>
+                                    <span class="detail-value">1 Adult</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Total Amount</span>
+                                    <span class="detail-value gold-text">$1,499</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Booking Date</span>
+                                    <span class="detail-value">Dec 20, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-card-footer">
+                            <button class="action-btn-view" onclick="window.location.href='ticket.html'">View Ticket</button>
+                            <button class="action-btn-modify">Modify</button>
+                            <button class="action-btn-cancel">Cancel</button>
+                            <button class="action-btn-pay">Complete Payment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Completed Bookings -->
+            <div class="bookings-section">
+                <h2 class="section-title">Completed Flights</h2>
+                <div class="bookings-list-detailed">
+                    <div class="booking-card-detailed glass-card completed">
+                        <div class="booking-card-header">
+                            <div class="booking-status completed-status">
+                                <span class="status-dot"></span>
+                                <span>Completed</span>
+                            </div>
+                            <div class="booking-ref">Booking #: LA-2024-123450</div>
+                        </div>
+                        <div class="booking-card-body">
+                            <div class="booking-route-large">
+                                <div class="route-city">
+                                    <div class="city-code">LAX</div>
+                                    <div class="city-name">Los Angeles</div>
+                                    <div class="city-time">09:00</div>
+                                    <div class="city-date">Nov 15, 2024</div>
+                                </div>
+                                <div class="route-arrow">
+                                    <div class="flight-duration">14h 30m</div>
+                                    <div class="flight-icon">✈️</div>
+                                    <div class="flight-stops">Non-stop</div>
+                                </div>
+                                <div class="route-city">
+                                    <div class="city-code">SYD</div>
+                                    <div class="city-name">Sydney</div>
+                                    <div class="city-time">23:30</div>
+                                    <div class="city-date">Nov 16, 2024</div>
+                                </div>
+                            </div>
+                            <div class="booking-details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">Flight Number</span>
+                                    <span class="detail-value">QF12</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class</span>
+                                    <span class="detail-value">Business</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Seats</span>
+                                    <span class="detail-value">5A</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Passengers</span>
+                                    <span class="detail-value">1 Adult</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Amount Paid</span>
+                                    <span class="detail-value">$1,899</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Travel Date</span>
+                                    <span class="detail-value">Nov 15, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-card-footer">
+                            <button class="action-btn-view" onclick="window.location.href='ticket.html'">View Details</button>
+                            <button class="action-btn-review">Write Review</button>
+                            <button class="action-btn-rebook">Book Again</button>
+                        </div>
+                    </div>
+
+                    <div class="booking-card-detailed glass-card completed">
+                        <div class="booking-card-header">
+                            <div class="booking-status completed-status">
+                                <span class="status-dot"></span>
+                                <span>Completed</span>
+                            </div>
+                            <div class="booking-ref">Booking #: LA-2024-123451</div>
+                        </div>
+                        <div class="booking-card-body">
+                            <div class="booking-route-large">
+                                <div class="route-city">
+                                    <div class="city-code">DXB</div>
+                                    <div class="city-name">Dubai</div>
+                                    <div class="city-time">08:30</div>
+                                    <div class="city-date">Oct 20, 2024</div>
+                                </div>
+                                <div class="route-arrow">
+                                    <div class="flight-duration">7h 45m</div>
+                                    <div class="flight-icon">✈️</div>
+                                    <div class="flight-stops">Non-stop</div>
+                                </div>
+                                <div class="route-city">
+                                    <div class="city-code">SIN</div>
+                                    <div class="city-name">Singapore</div>
+                                    <div class="city-time">16:15</div>
+                                    <div class="city-date">Oct 20, 2024</div>
+                                </div>
+                            </div>
+                            <div class="booking-details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">Flight Number</span>
+                                    <span class="detail-value">SQ492</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class</span>
+                                    <span class="detail-value">Economy</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Seats</span>
+                                    <span class="detail-value">12C, 12D</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Passengers</span>
+                                    <span class="detail-value">2 Adults</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Amount Paid</span>
+                                    <span class="detail-value">$998</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Travel Date</span>
+                                    <span class="detail-value">Oct 20, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-card-footer">
+                            <button class="action-btn-view" onclick="window.location.href='ticket.html'">View Details</button>
+                            <button class="action-btn-review">Write Review</button>
+                            <button class="action-btn-rebook">Book Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cancelled Bookings -->
+            <div class="bookings-section">
+                <h2 class="section-title">Cancelled Bookings</h2>
+                <div class="bookings-list-detailed">
+                    <div class="booking-card-detailed glass-card cancelled">
+                        <div class="booking-card-header">
+                            <div class="booking-status cancelled-status">
+                                <span class="status-dot"></span>
+                                <span>Cancelled</span>
+                            </div>
+                            <div class="booking-ref">Booking #: LA-2024-123452</div>
+                        </div>
+                        <div class="booking-card-body">
+                            <div class="booking-route-large">
+                                <div class="route-city">
+                                    <div class="city-code">JFK</div>
+                                    <div class="city-name">New York</div>
+                                    <div class="city-time">-</div>
+                                    <div class="city-date">Cancelled</div>
+                                </div>
+                                <div class="route-arrow">
+                                    <div class="flight-duration">-</div>
+                                    <div class="flight-icon">✈️</div>
+                                    <div class="flight-stops">Cancelled</div>
+                                </div>
+                                <div class="route-city">
+                                    <div class="city-code">LHR</div>
+                                    <div class="city-name">London</div>
+                                    <div class="city-time">-</div>
+                                    <div class="city-date">Cancelled</div>
+                                </div>
+                            </div>
+                            <div class="booking-details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">Flight Number</span>
+                                    <span class="detail-value">BA178</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class</span>
+                                    <span class="detail-value">Business</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Cancellation Date</span>
+                                    <span class="detail-value">Nov 10, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Refund Status</span>
+                                    <span class="detail-value">Processed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Refund Amount</span>
+                                    <span class="detail-value">$1,199</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Original Amount</span>
+                                    <span class="detail-value">$1,299</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-card-footer">
+                            <button class="action-btn-view">View Details</button>
+                            <button class="action-btn-rebook">Book Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions glass-card">
+                <h3>Quick Actions</h3>
+                <div class="actions-grid">
+                    <button class="quick-action-btn" onclick="window.location.href='booking.html'">
+                        <span class="action-icon">✈️</span>
+                        <span>Book New Flight</span>
+                    </button>
+                    <button class="quick-action-btn">
+                        <span class="action-icon">📧</span>
+                        <span>Email Itinerary</span>
+                    </button>
+                    <button class="quick-action-btn">
+                        <span class="action-icon">📱</span>
+                        <span>Download App</span>
+                    </button>
+                    <button class="quick-action-btn">
+                        <span class="action-icon">💳</span>
+                        <span>Payment Methods</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

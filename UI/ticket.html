@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boarding Pass - VoyAir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">✈️</span>
+                    <span class="logo-text">VoyAir</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="booking.html" class="nav-link">Book Flight</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Ticket/Invoice Page -->
+    <section id="ticket" class="page active">
+        <div class="ticket-container">
+            <div class="boarding-pass glass-card">
+                <div class="ticket-header">
+                    <div class="airline-logo">✈️ VoyAir</div>
+                    <div class="ticket-type">BOARDING PASS</div>
+                </div>
+                <div class="ticket-body">
+                    <div class="ticket-section">
+                        <div class="ticket-field">
+                            <label>Passenger</label>
+                            <value>JOHN DOE</value>
+                        </div>
+                        <div class="ticket-field">
+                            <label>Flight Number</label>
+                            <value>AA1234</value>
+                        </div>
+                        <div class="ticket-field">
+                            <label>Date</label>
+                            <value>Dec 25, 2024</value>
+                        </div>
+                    </div>
+                    <div class="ticket-section">
+                        <div class="ticket-field">
+                            <label>From</label>
+                            <value>JFK - New York</value>
+                        </div>
+                        <div class="ticket-field">
+                            <label>To</label>
+                            <value>LHR - London</value>
+                        </div>
+                        <div class="ticket-field">
+                            <label>Seat</label>
+                            <value>3A</value>
+                        </div>
+                    </div>
+                    <div class="ticket-section">
+                        <div class="ticket-field">
+                            <label>Departure</label>
+                            <value>08:00</value>
+                        </div>
+                        <div class="ticket-field">
+                            <label>Arrival</label>
+                            <value>14:30</value>
+                        </div>
+                        <div class="ticket-field">
+                            <label>Class</label>
+                            <value>Business</value>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-qr">
+                    <div class="qr-code">
+                        <div class="qr-pattern"></div>
+                    </div>
+                    <div class="qr-text">Scan for Boarding</div>
+                </div>
+                <div class="ticket-footer">
+                    <button class="neon-button" id="download-ticket">Download</button>
+                    <button class="neon-button" id="print-ticket">Print</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

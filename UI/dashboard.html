@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Luxury Flight Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">✈️</span>
+                    <span class="logo-text">VoyAir</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="booking.html" class="nav-link">Book Flight</a></li>
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="my-bookings.html" class="nav-link">My Bookings</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- User Dashboard -->
+    <section id="dashboard" class="page active">
+        <div class="dashboard-hero-simple">
+            <div class="dashboard-hero-overlay-simple"></div>
+            <div class="dashboard-hero-content-simple">
+                <div class="dashboard-welcome">
+                    <div class="welcome-profile">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Profile" class="welcome-profile-img">
+                        <div class="profile-status-simple"></div>
+                    </div>
+                    <div class="welcome-text">
+                        <h1>Welcome Back, <span class="cyan-text">John Doe</span></h1>
+                        <p>Premium Member Since 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-container">
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-card glass-card dashboard-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="card-icon-large">📊</div>
+                    <div class="card-content">
+                        <h3>Booked Flights</h3>
+                        <p class="card-number">5</p>
+                        <p class="card-trend">↑ 2 this month</p>
+                    </div>
+                </div>
+                <div class="dashboard-card glass-card dashboard-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');">
+                    <div class="card-icon-large">💰</div>
+                    <div class="card-content">
+                        <h3>Wallet Balance</h3>
+                        <p class="card-number cyan-text">$2,450</p>
+                        <p class="card-trend">+$500 this month</p>
+                    </div>
+                </div>
+                <div class="dashboard-card glass-card dashboard-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="card-icon-large">🎫</div>
+                    <div class="card-content">
+                        <h3>Active Tickets</h3>
+                        <p class="card-number">3</p>
+                        <p class="card-trend">Next: Dec 25, 2024</p>
+                    </div>
+                </div>
+                <div class="dashboard-card glass-card dashboard-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');">
+                    <div class="card-icon-large">⭐</div>
+                    <div class="card-content">
+                        <h3>Loyalty Points</h3>
+                        <p class="card-number cyan-text">12,500</p>
+                        <p class="card-trend">5,000 to next tier</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bookings-section">
+                <h2 class="section-title">Recent Bookings</h2>
+                <div class="bookings-list">
+                    <div class="booking-item glass-card booking-item-image" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="booking-item-content">
+                            <div class="booking-route-visual">
+                                <div class="route-city-small">
+                                    <div class="city-code-small">JFK</div>
+                                    <div class="city-name-small">New York</div>
+                                </div>
+                                <div class="route-arrow-small">→</div>
+                                <div class="route-city-small">
+                                    <div class="city-code-small">LHR</div>
+                                    <div class="city-name-small">London</div>
+                                </div>
+                            </div>
+                            <div class="booking-info">
+                                <h3>New York → London</h3>
+                                <p>Flight #AA1234 | Date: Dec 25, 2024 | 08:00 - 14:30</p>
+                                <div class="booking-meta">
+                                    <span class="status-badge confirmed">Confirmed</span>
+                                    <span class="booking-class">Business Class</span>
+                                    <span class="booking-price">$1,299</span>
+                                </div>
+                            </div>
+                            <button class="neon-button small" onclick="window.location.href='ticket.html'">View Details</button>
+                        </div>
+                    </div>
+                    <div class="booking-item glass-card booking-item-image" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80');">
+                        <div class="booking-item-content">
+                            <div class="booking-route-visual">
+                                <div class="route-city-small">
+                                    <div class="city-code-small">CDG</div>
+                                    <div class="city-name-small">Paris</div>
+                                </div>
+                                <div class="route-arrow-small">→</div>
+                                <div class="route-city-small">
+                                    <div class="city-code-small">NRT</div>
+                                    <div class="city-name-small">Tokyo</div>
+                                </div>
+                            </div>
+                            <div class="booking-info">
+                                <h3>Paris → Tokyo</h3>
+                                <p>Flight #JL5678 | Date: Jan 10, 2025 | 10:30 - 21:45</p>
+                                <div class="booking-meta">
+                                    <span class="status-badge confirmed">Confirmed</span>
+                                    <span class="booking-class">First Class</span>
+                                    <span class="booking-price">$2,999</span>
+                                </div>
+                            </div>
+                            <button class="neon-button small" onclick="window.location.href='ticket.html'">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content-grid">
+                <div class="timeline-section">
+                    <h2 class="section-title">Travel History</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card timeline-with-image" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                                <div class="timeline-image-icon">✈️</div>
+                                <h4>Dubai → Singapore</h4>
+                                <p>Nov 15, 2024 | Business Class</p>
+                                <div class="timeline-stats">
+                                    <span>7h 45m</span>
+                                    <span>•</span>
+                                    <span>Non-stop</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card timeline-with-image" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');">
+                                <div class="timeline-image-icon">✈️</div>
+                                <h4>Los Angeles → Sydney</h4>
+                                <p>Oct 20, 2024 | First Class</p>
+                                <div class="timeline-stats">
+                                    <span>14h 30m</span>
+                                    <span>•</span>
+                                    <span>Non-stop</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-sidebar">
+                    <div class="quick-stats glass-card">
+                        <h3>Quick Stats</h3>
+                        <div class="quick-stat-item">
+                            <span class="stat-label-small">Total Miles</span>
+                            <span class="stat-value-small">125,430</span>
+                        </div>
+                        <div class="quick-stat-item">
+                            <span class="stat-label-small">Favorite Destination</span>
+                            <span class="stat-value-small">London</span>
+                        </div>
+                        <div class="quick-stat-item">
+                            <span class="stat-label-small">This Year Flights</span>
+                            <span class="stat-value-small">18</span>
+                        </div>
+                    </div>
+
+                    <div class="upcoming-reminder glass-card">
+                        <h3>Upcoming Trip</h3>
+                        <div class="reminder-content">
+                            <div class="reminder-route">JFK → LHR</div>
+                            <div class="reminder-date">Dec 25, 2024</div>
+                            <div class="reminder-countdown">3 days remaining</div>
+                            <button class="neon-button small full-width" onclick="window.location.href='my-bookings.html'">View Booking</button>
+                        </div>
+                    </div>
+
+                    <div class="loyalty-progress glass-card">
+                        <h3>Loyalty Progress</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <div class="progress-text">75% to Platinum</div>
+                        </div>
+                        <p class="progress-note">5,000 more points needed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

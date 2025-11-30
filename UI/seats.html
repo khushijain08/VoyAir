@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Seats - VoyAir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">✈️</span>
+                    <span class="logo-text">VoyAir</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="booking.html" class="nav-link">Book Flight</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seat Selection Page -->
+    <section id="seats" class="page active">
+        <div class="seats-container">
+            <h1 class="page-title">Select Your Seat</h1>
+            
+            <div class="aircraft-layout">
+                <div class="aircraft-cabin glass-card">
+                    <div class="cabin-section">
+                        <div class="cabin-label">First Class</div>
+                        <div class="seats-grid premium">
+                            <div class="seat available" data-seat="1A">1A</div>
+                            <div class="seat available" data-seat="1B">1B</div>
+                            <div class="seat available" data-seat="1C">1C</div>
+                            <div class="seat available" data-seat="1D">1D</div>
+                            <div class="seat reserved" data-seat="2A">2A</div>
+                            <div class="seat reserved" data-seat="2B">2B</div>
+                            <div class="seat available" data-seat="2C">2C</div>
+                            <div class="seat available" data-seat="2D">2D</div>
+                        </div>
+                    </div>
+                    <div class="cabin-divider"></div>
+                    <div class="cabin-section">
+                        <div class="cabin-label">Business Class</div>
+                        <div class="seats-grid business">
+                            <div class="seat available" data-seat="3A">3A</div>
+                            <div class="seat available" data-seat="3B">3B</div>
+                            <div class="seat available" data-seat="3C">3C</div>
+                            <div class="seat available" data-seat="3D">3D</div>
+                            <div class="seat available" data-seat="4A">4A</div>
+                            <div class="seat available" data-seat="4B">4B</div>
+                            <div class="seat reserved" data-seat="4C">4C</div>
+                            <div class="seat available" data-seat="4D">4D</div>
+                        </div>
+                    </div>
+                    <div class="cabin-divider"></div>
+                    <div class="cabin-section">
+                        <div class="cabin-label">Economy Class</div>
+                        <div class="seats-grid economy">
+                            <div class="seat available" data-seat="5A">5A</div>
+                            <div class="seat available" data-seat="5B">5B</div>
+                            <div class="seat available" data-seat="5C">5C</div>
+                            <div class="seat available" data-seat="5D">5D</div>
+                            <div class="seat available" data-seat="5E">5E</div>
+                            <div class="seat available" data-seat="5F">5F</div>
+                            <div class="seat reserved" data-seat="6A">6A</div>
+                            <div class="seat reserved" data-seat="6B">6B</div>
+                            <div class="seat available" data-seat="6C">6C</div>
+                            <div class="seat available" data-seat="6D">6D</div>
+                            <div class="seat available" data-seat="6E">6E</div>
+                            <div class="seat available" data-seat="6F">6F</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seat-legend glass-card">
+                <div class="legend-item">
+                    <div class="legend-seat available"></div>
+                    <span>Available</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-seat reserved"></div>
+                    <span>Reserved</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-seat selected"></div>
+                    <span>Selected</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-seat vip"></div>
+                    <span>VIP</span>
+                </div>
+            </div>
+
+            <div class="selected-seats glass-card">
+                <h3>Selected Seats: <span id="selected-seats-list">None</span></h3>
+                <button class="neon-button" id="proceed-payment">Proceed to Payment</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

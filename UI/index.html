@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyAir - Premium Flight Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">✈️</span>
+                    <span class="logo-text">VoyAir</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="booking.html" class="nav-link">Book Flight</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="my-bookings.html" class="nav-link">My Bookings</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <!-- Hero Section with Background Image -->
+        <div class="hero-section">
+            <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');"></div>
+            <div class="hero-overlay"></div>
+            <div class="animated-particles"></div>
+            <div class="flying-airplane">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Airplane" class="airplane-img">
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text-animate">
+                    <h1 class="hero-title">
+                        <span class="glow-text">LUXURY</span> FLIGHT RESERVATION
+                    </h1>
+                    <p class="hero-subtitle">Experience Premium Travel Like Never Before</p>
+                </div>
+                
+                <!-- Flight Search Bar -->
+                <div class="search-container glass-card search-slide-in">
+                    <div class="search-row">
+                        <div class="search-field">
+                            <label>From</label>
+                            <input type="text" placeholder="Origin Airport" class="glow-input">
+                        </div>
+                        <div class="swap-icon">⇄</div>
+                        <div class="search-field">
+                            <label>To</label>
+                            <input type="text" placeholder="Destination Airport" class="glow-input">
+                        </div>
+                        <div class="search-field">
+                            <label>Departure</label>
+                            <input type="date" class="glow-input">
+                        </div>
+                        <div class="search-field">
+                            <label>Return</label>
+                            <input type="date" class="glow-input">
+                        </div>
+                        <div class="search-field">
+                            <label>Class</label>
+                            <select class="glow-input">
+                                <option>Economy</option>
+                                <option>Business</option>
+                                <option>First Class</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <label>Passengers</label>
+                            <input type="number" min="1" max="9" value="1" class="glow-input">
+                        </div>
+                    </div>
+                    <button class="neon-button search-btn">
+                        <span>Search Flights</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Destinations with Images -->
+        <div class="destinations-section">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="destination-overlay"></div>
+                        <div class="destination-content">
+                            <h3>New York</h3>
+                            <p>From $499</p>
+                            <button class="neon-button small">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="destination-overlay"></div>
+                        <div class="destination-content">
+                            <h3>London</h3>
+                            <p>From $599</p>
+                            <button class="neon-button small">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80');">
+                        <div class="destination-overlay"></div>
+                        <div class="destination-content">
+                            <h3>Paris</h3>
+                            <p>From $699</p>
+                            <button class="neon-button small">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80');">
+                        <div class="destination-overlay"></div>
+                        <div class="destination-content">
+                            <h3>Tokyo</h3>
+                            <p>From $899</p>
+                            <button class="neon-button small">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Luxury Offers Carousel with Images -->
+        <div class="offers-carousel">
+            <h2 class="section-title">Premium Offers</h2>
+            <div class="offers-container">
+                <div class="offer-card glass-card offer-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="offer-badge">NEW</div>
+                    <h3>First Class Upgrade</h3>
+                    <p>50% OFF</p>
+                    <span class="offer-price">$2,999</span>
+                </div>
+                <div class="offer-card glass-card offer-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');">
+                    <div class="offer-badge">HOT</div>
+                    <h3>Business Class</h3>
+                    <p>30% OFF</p>
+                    <span class="offer-price">$1,499</span>
+                </div>
+                <div class="offer-card glass-card offer-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="offer-badge">VIP</div>
+                    <h3>Luxury Package</h3>
+                    <p>Premium Service</p>
+                    <span class="offer-price">$4,999</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flight Experience Gallery -->
+        <div class="experience-gallery">
+            <h2 class="section-title">Flight Experience</h2>
+            <p class="section-subtitle">Discover the luxury that awaits you on every journey</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Luxury Cabin">
+                    <div class="gallery-overlay always-visible">
+                        <h3>Luxury Cabin</h3>
+                        <p>Spacious seats with premium comfort, adjustable headrests, and personal entertainment systems. Experience ultimate relaxation in our state-of-the-art cabins designed for your comfort.</p>
+                        <div class="gallery-features">
+                            <span>✓ 180° Reclining</span>
+                            <span>✓ Privacy Suite</span>
+                            <span>✓ Premium Amenities</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="Premium Service">
+                    <div class="gallery-overlay always-visible">
+                        <h3>Premium Service</h3>
+                        <p>Dedicated flight attendants providing personalized service throughout your journey. From welcome drinks to assistance with any request, we ensure your comfort is our priority.</p>
+                        <div class="gallery-features">
+                            <span>✓ 24/7 Assistance</span>
+                            <span>✓ Concierge Service</span>
+                            <span>✓ Priority Support</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Fine Dining">
+                    <div class="gallery-overlay always-visible">
+                        <h3>Fine Dining</h3>
+                        <p>Curated menus by world-renowned chefs featuring international cuisine. Enjoy gourmet meals with premium wines and beverages, all served with elegant presentation.</p>
+                        <div class="gallery-features">
+                            <span>✓ Chef-Curated Menu</span>
+                            <span>✓ Premium Wines</span>
+                            <span>✓ Dietary Options</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="Entertainment">
+                    <div class="gallery-overlay always-visible">
+                        <h3>Entertainment</h3>
+                        <p>Latest movies, TV shows, music, and games on your personal 4K screen. Stay connected with high-speed WiFi and power outlets at every seat.</p>
+                        <div class="gallery-features">
+                            <span>✓ 4K Screens</span>
+                            <span>✓ High-Speed WiFi</span>
+                            <span>✓ Power Outlets</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Lounge Access">
+                    <div class="gallery-overlay always-visible">
+                        <h3>Lounge Access</h3>
+                        <p>Exclusive access to premium airport lounges worldwide. Relax in comfort with complimentary food, beverages, showers, and business facilities before your flight.</p>
+                        <div class="gallery-features">
+                            <span>✓ Global Lounges</span>
+                            <span>✓ Complimentary Meals</span>
+                            <span>✓ Business Facilities</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="Priority Boarding">
+                    <div class="gallery-overlay always-visible">
+                        <h3>Priority Boarding</h3>
+                        <p>Skip the lines with priority check-in, security, and boarding. Enjoy a seamless travel experience from airport arrival to takeoff.</p>
+                        <div class="gallery-features">
+                            <span>✓ Fast Track</span>
+                            <span>✓ Priority Check-in</span>
+                            <span>✓ Early Boarding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
